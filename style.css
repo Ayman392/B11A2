@@ -36,10 +36,9 @@ body{
 }
 
 /* Width Styles */
-.nav-bar,.banner-content,.curriculum-content,.story-contents{
+.nav-bar,.banner-content,.curriculum-content,.story-contents,.footer-content{
     max-width: 1160px;
     margin: 0 auto;
-    margin-bottom: 4rem;
 }
 /* Nav Bar Styles */
 .nav-bar{
@@ -174,7 +173,6 @@ body{
 }
 .story-section{
     background: url(assets/bg.png),linear-gradient(0deg,rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 1));
-    padding-bottom: 3rem;
 }
 .story-card1{
     max-width: 100%;
@@ -262,6 +260,38 @@ body{
     color: white;
 }
 
+/* Footer Section */
+footer{
+    background-color: rgba(1, 172, 253, 1) ;
+}
+.footer-content{
+    padding: 5rem 0;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10rem;
+}
+.kids-logo{
+    align-items: center;
+    gap: 0.5rem;
+}
+.kids-title{
+    font-size: 2.25rem;
+    font-weight: 800;
+}
+.kids-des{
+    font-size: 1.25rem;
+}
+.about-details{
+    justify-content: space-between;
+}
+.about-title,.contact-title{
+    font-size: 1.75rem
+}
+.about p{
+    font-size: 1.25rem;
+}
+
 /* Mobile responsive for nav-bar */
 @media screen and (max-width: 576px) {
     .menu,.contact-btn,.circle-arrow{
@@ -323,5 +353,20 @@ body{
     .view{
         padding: 0.5rem 1.5rem;
         margin-top: 3rem;
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 0;
+    }
+    .about-details{
+        flex-direction: column;
+    }
+    .kids-des{
+        font-size: 1rem;
+    }
+    .contact{
+        padding-bottom: 2rem;
     }
 }
