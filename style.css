@@ -9,6 +9,10 @@
 }
 
 /* Shared Styles */
+body{
+    background-color: rgba(247, 247, 247, 1);
+    margin: 0;
+}
 .hidden{
     display: none;
 }
@@ -32,7 +36,7 @@
 }
 
 /* Width Styles */
-.nav-bar,.banner-content,.curriculum-content{
+.nav-bar,.banner-content,.curriculum-content,.story-contents{
     max-width: 1160px;
     margin: 0 auto;
     margin-bottom: 4rem;
@@ -107,7 +111,7 @@
 .curriculum{
     background-image: url(assets/bg.png);
 }
-.curriculum-title{
+.curriculum-title,.story-title{
     text-align: center;
     font-size: 3rem;
     font-weight: 800;
@@ -158,11 +162,109 @@
     font-size: 1.25rem;
     font-weight: 800;
 }
+.circle-arrow{
+    margin: 5rem 0;
+    text-align: center;
+    font-size: 3rem;
+}
 
+/* Story section */
+.story-cards{
+    gap: 3rem;
+}
+.story-section{
+    background: url(assets/bg.png),linear-gradient(0deg,rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 1));
+    padding-bottom: 3rem;
+}
+.story-card1{
+    max-width: 100%;
+    max-height: 100%;
+    width: 33.75rem;
+    height: 38rem;
+    border-radius: 1.5rem;
+    background-color: white;
+}
+.story1-img,.story2-img{
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+.story2-img{
+    width: 100%;
+}
+.card1-content{
+    margin: 2rem;
+    position: relative;
+    bottom: 4rem;
+}
+.story1-btn{
+    background-color: rgba(1, 172, 253, 1);
+    border: none;
+    padding: 1rem 1.25rem;
+    border-radius: 1.5rem;
+    color: white;
+    font-size: 1rem;
+}
+#story-btn{
+    background-color: rgba(93, 88, 240, 1);
+}
+.card1-title{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.card1-des{
+    color: rgba(102, 102, 102, 1);
+    font-size: 1rem;
+}
+.card-college{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.story-card2{
+    background-color: white;
+    width: 18.5rem;
+    height: 18.75rem;
+    border-radius: 1.5rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+.card2-content{
+    margin: 0 2rem;
+    position: relative;
+    bottom: 1.5rem;
+}
+.story2-btn{
+    background-color: rgba(149, 178, 38, 1);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 1.5rem;
+}
+.card2-des{
+    font-size: 1rem;
+    font-weight: 800;
+}
+.view-btn{
+    text-align: center;
+}
+.view{
+    margin: 3rem 0;
+    text-align: center;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgba(17, 17, 17, 1);
+    color: white;
+}
 
 /* Mobile responsive for nav-bar */
 @media screen and (max-width: 576px) {
-    .menu,.contact-btn{
+    .menu,.contact-btn,.circle-arrow{
         display: none;
     }
     .bar{
@@ -173,7 +275,6 @@
     .banner-content{
         flex-direction: column-reverse;
         text-align: center;
-        
     }
     .banner-title{
         font-size: 2rem;
@@ -188,13 +289,39 @@
     .banner-img{
         max-width: 75%;
     }
-    .curriculum-title{
+    .curriculum-title,.story-title{
         font-size: 2rem;
     }
-    .curriculum-cards{
+    .curriculum-cards,.story-cards{
         flex-direction: column;
     }
-    .curriculum-card{
+    .curriculum-card,.story-cards{
         margin: 0rem 1rem;
+    }
+    .story-section{
+        padding-bottom: 0;
+    }
+    .story-contents{
+        margin-bottom: 0;
+    }
+    .story-card1{
+        display: none;
+    }
+    .card-college{
+        max-width: 100%;
+        max-height: 100%;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .story-card2{
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    .card2-des{
+        font-size: 0.75rem;
+    }
+    .view{
+        padding: 0.5rem 1.5rem;
+        margin-top: 3rem;
     }
 }
