@@ -9,6 +9,9 @@
 }
 
 /* Shared Styles */
+.hidden{
+    display: none;
+}
 .flex {
     display: flex;
 }
@@ -28,15 +31,10 @@
     font-weight: 800;
 }
 
-body{
-    margin: 0;
-}
-
-/* Header Styles */
-.header{
+/* Width Styles */
+.nav-bar,.banner-content{
     max-width: 1160px;
     margin: 0 auto;
-    padding-top: 20px;
 }
 /* Nav Bar Styles */
 .nav-bar{
@@ -44,7 +42,7 @@ body{
     align-items: center;
 }
 .nav-logo{
-    gap: 15px;
+    gap: 1rem;
     align-items: center;
 }
 .nav-logo img{
@@ -53,7 +51,7 @@ body{
 }
 .logo-title{
     color: rgba(17, 17, 17, 1);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 800;
 }
 .menu{
@@ -66,26 +64,70 @@ body{
     text-decoration: none;
 }
 .menu-link{
-    padding:0 32px;
+    padding:0 2rem;
 }
 .menu-option{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 .contact-btn{
-    padding: 12px 40px;
+    padding: 1rem 2.5rem;
     border: none;
     border-radius: 12px;
     background-color: rgba(254, 163, 1, 1);
-    font-size: 16px;
+    font-size: 1.25rem;
     color: white;
 }
+/* Banner Styles */
+.banner-content{
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-details{
+    max-width: 650px;
+    max-height: 330px;
+}
+.banner-title{
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+.banner-des{
+    font-size: 1.25rem;
+}
+.enroll-btn{
+    background-color: rgba(17, 17, 17, 1);
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 3rem;
+    color: white;
+    font-size: 1.25rem;
+}
+
 
 /* Mobile responsive for nav-bar */
 @media screen and (max-width: 576px) {
-    body{
-        padding: 0 5px;
-    }
     .menu,.contact-btn{
         display: none;
+    }
+    .bar{
+        display: block;
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+    .banner-content{
+        flex-direction: column-reverse;
+        text-align: center;
+        
+    }
+    .banner-title{
+        font-size: 2rem;
+    }
+    .banner-des{
+        font-size: 1rem;
+    }
+    .enroll-btn{
+        padding: 0.75rem 1.5rem;
+    }
+    .banner-img{
+        max-width: 75%;
     }
 }
